@@ -32,7 +32,7 @@
         <h2>Events in action</h2>
         <!-- Adding click listener with v-on: click -->
         <button v-on:click="addCounter(2)">Add 2</button>
-        <button v-on:click="reduceCounter(2)">Remove 2</button>
+        <button @click="reduceCounter(2)">Remove 2</button>
 
         <p>Result: {{ counter }}</p>
         <!-- v-once, if we want to lock the value of counter -->
@@ -44,16 +44,15 @@
         <input 
           type="text"
           placeholder="Enter your name!"
-          v-on:input="setName($event,'Mbreti')"
-          v-on:keyup.enter="showName"
+          @input="setName($event,'Mbreti')"
+          @keyup.enter="showName"
         >
-
         <h4>Plase press Enter key after typing the name!</h4>
         <!-- Showing the name  -->
         <p>Your name: {{ confirmedName }}</p>
 
         <!-- Form with prevent modifier to not refresh datas -->
-        <form v-on:submit.prevent="submitForm">
+        <form @submit.prevent="submitForm">
           <input type="text">
           <button>Submit</button>
         </form>

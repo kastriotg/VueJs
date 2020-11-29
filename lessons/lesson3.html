@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Basics</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="/includes/lesson3.js" defer></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  </head>
+  <body>
+    <header>
+      <h1> <a style="color: white;" href="/index.html"><i class="fa fa-arrow-left"></i></a> &nbsp Vue Events</h1> 
+    </header>
+
+    <main>
+      <!-- instead of v-on will be using shorthand @, v-on:click = @click-->
+      <section id="styling">
+        <h2>Vue Dynamic Styling</h2>
+        <!-- Not using computed -->
+        <div class="demo"
+          :class="{active: boxASelected}" 
+          @click="boxSelected('A')"
+        >Click to select or deselect!</div>
+        <!-- Dynamic classes using computed-->
+        <div class="demo"
+          :class="boxBClasses" 
+          @click="boxSelected('B')"
+        >Click to select or deselect!</div>
+        <!-- Dynamic classes Array syntax -->
+        <div 
+          :class="['demo',{active: boxCSelected}]" 
+          @click="boxSelected('C')"
+        >Click to select or deselect!</div>
+      </section>
+    </main>
+  </body>
+</html>
