@@ -22,10 +22,10 @@
 
     <main>
       <section id="todos">
-        <h2>My course goals</h2>
+        <h2>My Todos</h2>
         <input type="text" v-model="todo" @keyup.enter="addTodo"/>
-        <button @click="addTodo">Add Goal</button>
-        <p v-if="todos.length === 0">No goals have been added yet - please start adding some!</p>
+        <button @click="addTodo">Add Todo</button>
+        <p v-if="todos.length === 0">No todos have been added yet - please start adding some!</p>
         <p v-show="todos.length > 0">Click the todo to remove it!</p>
         <ul v-else>
           <li v-for="(Todo, index) in todos" @click="removeTodo(index)">{{Todo}}</li>
