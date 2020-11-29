@@ -23,6 +23,8 @@ const app = Vue.createApp({
                 case 'B': this.boxBSelected = !this.boxBSelected;
                     break;
                 case 'C': this.boxCSelected = !this.boxCSelected;
+                    break;
+                default : console.log('Box doesnt exist');
             }
         }
     }
