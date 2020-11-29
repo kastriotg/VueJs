@@ -8,23 +8,17 @@
       href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../styles.css" />
     <script src="https://unpkg.com/vue@next" defer></script>
-    <script src="app.js" defer></script>
+    <script src="/includes/lesson2.js" defer></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   </head>
   <body>
     <header>
-      <h1>Vue Course</h1> 
+      <h1> <a style="color: white;" href="/index.html"><i class="fa fa-arrow-left"></i></a> &nbsp Vue Events</h1> 
     </header>
     <main id="user-goal">
-      <!-- The Course Goal Section -->
-      <section>
-        <h2>My Course Goal</h2>
-        <!-- Calling outputGoal function -->
-        <p>{{ outputGoal() }}</p> 
-        <!-- Binding   v-bind -->
-        <p>Learn more <a v-bind:href="vueLink">about Vue</a> </p>
-      </section>
       <!-- The Events in action Section -->
       <section>
         <h2>Events in action</h2>
@@ -42,19 +36,20 @@
         <input 
           type="text"
           placeholder="Enter your name!"
-          v-on:input="setName($event,'Mbreti')"
-          v-on:keyup.enter="showName"
+          v-model="name"
         >
+        <input 
+          type="text"
+          placeholder="Enter your lastname!"
+          v-model="lastName"
+        >
+        <button v-on:click="resetInput">Reset input</button>
 
         <h4>Plase press Enter key after typing the name!</h4>
         <!-- Showing the name  -->
-        <p>Your name: {{ confirmedName }}</p>
-
-        <!-- Form with prevent modifier to not refresh datas -->
-        <form v-on:submit.prevent="submitForm">
-          <input type="text">
-          <button>Submit</button>
-        </form>
+        <!-- fullName computed function, fullname data property-->
+        <p>Your name from computed: {{ fullName }}</p>
+        <p>Your name from watch: {{ fullname }}</p>
       </section>
 
 

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Basics</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="/includes/lesson1.js" defer></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  </head>
+  <body>
+    <header>
+      <h1> <a style="color: white;" href="/index.html"><i class="fa fa-arrow-left"></i></a> &nbsp Vue Course</h1> 
+    </header>
+    <main id="user-goal">
+      <!-- The Course Goal Section -->
+      <section>
+        <h2>My Course Goal</h2>
+        <!-- Calling outputGoal function -->
+        <p>{{ outputGoal() }}</p> 
+        <!-- Binding   v-bind -->
+        <p>Learn more <a v-bind:href="vueLink">about Vue</a> </p>
+      </section>
+      <!-- The Events in action Section -->
+      <section>
+        <h2>Events in action</h2>
+        <!-- Adding click listener with v-on: click -->
+        <button v-on:click="addCounter(2)">Add 2</button>
+        <button v-on:click="reduceCounter(2)">Remove 2</button>
+
+        <p>Result: {{ counter }}</p>
+        <!-- v-once, if we want to lock the value of counter -->
+        <!-- <p v-once>Result: {{ counter }}</p> -->
+
+
+
+        <!-- input name section part -->
+        <input 
+          type="text"
+          placeholder="Enter your name!"
+          v-on:input="setName($event,'Mbreti')"
+          v-on:keyup.enter="showName"
+        >
+
+        <h4>Plase press Enter key after typing the name!</h4>
+        <!-- Showing the name  -->
+        <p>Your name: {{ confirmedName }}</p>
+
+        <!-- Form with prevent modifier to not refresh datas -->
+        <form v-on:submit.prevent="submitForm">
+          <input type="text">
+          <button>Submit</button>
+        </form>
+      </section>
+
+
+    </main>
+  </body>
+</html>

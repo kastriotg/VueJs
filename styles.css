@@ -81,3 +81,16 @@ button{
   border-radius: 10px;
   outline: 0;
 }
+
+#header-main ul{
+  display: flex;
+  gap: 1em;
+
+}
+#header-main ul li{
+  list-style: none;
+}
+#header-main ul li a{
+  text-decoration: none;
+  padding: 15px;
+}
