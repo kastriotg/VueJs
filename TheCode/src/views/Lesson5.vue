@@ -22,8 +22,8 @@
 
       <section id="controls" v-if="!winner">
         <button @click = "attackMonster">ATTACK</button>
-        <button :disabled="mayUseSpecialAttack" @click = "specialAttac">SPECIAL ATTACK</button>
-        <button @click="healPlayer">HEAL</button>
+        <button :disabled="mayUseSpecialAttack" @click = "specialAttac">S. ATTACK</button>
+        <button :disabled="mayHeal" @click="healPlayer">HEAL</button>
         <button @click="surrender">SURRENDER</button>
       </section>
       <section id="log" class="container">
@@ -67,6 +67,9 @@ export default {
         mayUseSpecialAttack(){
             return this.currentRound % 3 !== 0
         },
+        mayHeal(){
+            return this.currentRound % 3 !== 0
+        }
     },
     watch: {
         playerHealth(value){
@@ -186,16 +189,7 @@ export default {
   }
   
   button {
-    font: inherit;
-    border: 1px solid #88005b;
-    background-color: #88005b;
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: 12px;
-    margin: 1rem;
-    width: 12rem;
-    cursor: pointer;
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.26);
+    margin-bottom: 1rem;
   }
   
   button:focus {
@@ -215,5 +209,13 @@ export default {
     box-shadow: none;
     color: #3f3f3f;
     cursor: not-allowed;
+  }
+  ul{
+    margin: 1rem 0;
+    list-style: none;
+  }
+
+  ul li{
+    margin: 1rem 0!important;
   }
 </style>

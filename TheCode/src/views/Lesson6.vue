@@ -19,9 +19,10 @@
 </template>
 
 <script>
-// @ is an alias to /src
+
 import NewFriend from '../components/Lesson6/NewFriend';
 import FriendContact from '../components/Lesson6/FriendContact';
+
 export default {
   name: 'Lesson6',
   components: {
@@ -69,10 +70,7 @@ export default {
     list-style: none;
     
   }
-  ul button{
-    width: 9rem;
-    margin: 0 1rem;
-  }
+
   ul li{
     margin: 4rem 0;
   }

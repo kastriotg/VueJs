@@ -100,3 +100,10 @@ export default {
     }
 }
 </script>
+<style>
+    section input {
+        font: inherit;
+        border: 1px solid #ccc;
+    }
+
+</style>

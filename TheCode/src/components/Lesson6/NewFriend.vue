@@ -2,13 +2,13 @@
     <button v-if="addNewFriend" @click="addFriend">Add Friend</button>
     <form v-else @submit.prevent="submitData">
         <label for="name">Name:</label>
-        <input type="text" name="name" v-model="enteredName">
+        <input type="text" name="name" v-model="enteredName" required>
 
         <label for="phone">Phone:</label>
-        <input type="text" name="phone" v-model="enteredPhone">
+        <input type="text" name="phone" v-model="enteredPhone" required>
 
         <label for="email">Email:</label>
-        <input type="email" name="email" v-model="enteredEmail">
+        <input type="email" name="email" v-model="enteredEmail" required>
 
         <button>Add Contact</button>
         <button @click="addFriend">Close form</button>

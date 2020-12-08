@@ -1,0 +1,1 @@
+ul{margin:0;padding:0;justify-content:center;gap:1rem}li,ul{display:flex}li{border-radius:12px;border:1px solid #ccc;padding:1rem;width:15rem;margin:0 1rem;flex-direction:column;justify-content:space-between;align-items:center}h3{font-size:1.6em}p{background-color:#fff!important;color:#2c3e50!important;border:none!important}

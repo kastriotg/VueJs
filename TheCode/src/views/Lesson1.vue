@@ -99,5 +99,25 @@ data(){
 </script>
 
 <style>
+    section h2 {
+        font-size: 2rem;
+        border-bottom: 4px solid #ccc;
+        color: #4fc08d;
+        margin: 0 0 1rem 0;
+    }
+    section p {
+        font-size: 1.25rem;
+        font-weight: bold;
+        border: 1px solid #4fc08d;
+        background-color: #4fc08d;
+        color: white;
+        padding: 0.5rem;
+        border-radius: 25px;
+    }
+    section input {
+        font: inherit;
+        border: 1px solid #ccc;
+    }
+    
 
 </style>
