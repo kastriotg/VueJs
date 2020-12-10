@@ -6,7 +6,8 @@
     <router-link to="/lesson4">Lesson 4</router-link> |
     <router-link to="/lesson5">Lesson 5</router-link> |
     <router-link to="/lesson6">Lesson 6</router-link> |
-    <router-link to="/lesson7">Lesson 7</router-link>
+    <router-link to="/lesson7">Lesson 7</router-link> |
+    <router-link to="/lesson8">Lesson 8</router-link>
   </div>
   <router-view/>
 </template>
@@ -45,17 +46,6 @@ body {
   margin: 0;
 }
 
-header {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  margin: 3rem auto;
-  border-radius: 10px;
-  padding: 1rem;
-  background-color: #4fc08d;
-  color: white;
-  text-align: center;
-  width: 90%;
-  max-width: 40rem;
-}
 
 section {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
@@ -93,5 +83,9 @@ section button:active {
   border-color: #ec3169;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.26);
 }
-
+section input {
+  font: inherit;
+  border: 1px solid #ccc;
+  margin: 1rem;
+}
 </style>

@@ -32,9 +32,12 @@ export default {
 }
 </script>
 
-<style>
-  #todos h2 {
+<style scoped>
+  section h2 {
+    font-size: 2rem;
+    border-bottom: 4px solid #ccc;
     color: #1b995e;
+    margin: 0 0 1rem 0;
   }
   
   #todos ul {

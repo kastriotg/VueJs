@@ -152,7 +152,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   .healthbar {
     width: 100%;
     height: 40px;
@@ -216,6 +216,6 @@ export default {
   }
 
   ul li{
-    margin: 1rem 0!important;
+    margin: 1rem 0;
   }
 </style>

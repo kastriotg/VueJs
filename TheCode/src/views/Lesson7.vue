@@ -9,12 +9,14 @@
 </template>
 
 <script>
-
+//Importing components ActiveElement and KnowledgeBase
 import ActiveElement from '../components/Lesson7/ActiveElement';
 import KnowledgeBase from '../components/Lesson7/KnowledgeBase';
 
 export default {
   name: 'Lesson7',
+
+  //Exporting components to use on Template
   components: {
       ActiveElement,
       KnowledgeBase
@@ -22,6 +24,7 @@ export default {
 
   data() {
     return {
+      //An array of topics
       topics: [
         {
           id: 'basics',
@@ -39,49 +42,30 @@ export default {
             'With components, you can split logic (and markup) into separate building blocks and then combine those building blocks (and re-use them) to build powerful user interfaces.',
         },
       ],
+      //Showing the topic active element if activeTopic is true
       activeTopic: null,
     };
   },
   provide(){
     return {
+      //make topics available for all components, so we can skip a child, in this example skip KnowledgeBase
+      //and make topic availabe for KnowledgeGrid, which is a child of KnowledgeBase,
       topics: this.topics,
+      // Getting from knowledge element- child - from inject 
       selectTopic: this.activateTopic
     };
   },
   methods: {
     activateTopic(topicId) {
+      //Finding the topic on array based on the id provided from child
       this.activeTopic = this.topics.find((topic) => topic.id === topicId);
     },
   },
 }
 </script>
 
-<style>
-ul {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-li {
-  border-radius: 12px;
-  border: 1px solid #ccc;
-  padding: 1rem;
-  width: 15rem;
-  margin: 0 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-h3{
-  font-size: 1.6em;
-}
-p{
-  background-color: #fff!important;
-  color: #2c3e50!important;
-  border: none!important;
-}
+<style scoped>
+
+
 
 </style>

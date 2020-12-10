@@ -66,6 +66,29 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+  li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 20px;
+    margin: 1rem;
+  }
 
+  h2{
+    font-size: 2rem;
+    border-bottom: 4px solid #ccc;
+    color: #1b995e;
+    margin: 0 0 1rem 0;
+  }
+  li ul {
+      padding: 0;
+  }
+  li ul li{
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+  }
 </style>

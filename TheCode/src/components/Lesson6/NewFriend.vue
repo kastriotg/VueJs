@@ -44,7 +44,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 #app form{
   display: flex;
   flex-direction: column;
