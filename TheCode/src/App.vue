@@ -7,9 +7,10 @@
     <router-link to="/lesson5">Lesson 5</router-link> |
     <router-link to="/lesson6">Lesson 6</router-link> |
     <router-link to="/lesson7">Lesson 7</router-link> |
-    <router-link to="/lesson8">Lesson 8</router-link>
+    <router-link to="/lesson8">Lesson 8</router-link> |
+    <router-link to="/lesson9">Lesson 9</router-link>
   </div>
-  <router-view/>
+  <router-view />
 </template>
 
 <style>
@@ -39,13 +40,12 @@
 }
 
 html {
-  font-family: 'Jost', sans-serif;
+  font-family: "Jost", sans-serif;
 }
 
 body {
   margin: 0;
 }
-
 
 section {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);

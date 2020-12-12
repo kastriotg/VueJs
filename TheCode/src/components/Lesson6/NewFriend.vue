@@ -1,51 +1,51 @@
 <template>
-    <button v-if="addNewFriend" @click="addFriend">Add Friend</button>
-    <form v-else @submit.prevent="submitData">
-        <label for="name">Name:</label>
-        <input type="text" name="name" v-model="enteredName" required>
+  <button v-if="addNewFriend" @click="addFriend">Add Friend</button>
+  <form v-else @submit.prevent="submitData">
+    <label for="name">Name:</label>
+    <input type="text" name="name" v-model="enteredName" required />
 
-        <label for="phone">Phone:</label>
-        <input type="text" name="phone" v-model="enteredPhone" required>
+    <label for="phone">Phone:</label>
+    <input type="text" name="phone" v-model="enteredPhone" required />
 
-        <label for="email">Email:</label>
-        <input type="email" name="email" v-model="enteredEmail" required>
+    <label for="email">Email:</label>
+    <input type="email" name="email" v-model="enteredEmail" required />
 
-        <button>Add Contact</button>
-        <button @click="addFriend">Close form</button>
-    </form>
+    <button>Add Contact</button>
+    <button @click="addFriend">Close form</button>
+  </form>
 </template>
 
 <script>
 export default {
-  name: 'NewFriend',  
+  name: "NewFriend",
 
-  emits: ['add-friend'],
+  emits: ["add-friend"],
   data() {
     return {
-      enteredName: '',
-      enteredPhone: '',
-      enteredEmail: '',
-      addNewFriend: true
+      enteredName: "",
+      enteredPhone: "",
+      enteredEmail: "",
+      addNewFriend: true,
     };
   },
   methods: {
     submitData() {
       this.$emit(
-          'add-friend',
-          this.enteredName,
-          this.enteredPhone,
-          this.enteredEmail
+        "add-friend",
+        this.enteredName,
+        this.enteredPhone,
+        this.enteredEmail
       );
     },
-    addFriend(){
+    addFriend() {
       this.addNewFriend = !this.addNewFriend;
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped>
-#app form{
+#app form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,11 +57,12 @@ export default {
   width: 90%;
   max-width: 40rem;
 }
-#app form button, input{
+#app form button,
+input {
   margin-bottom: 1rem;
   width: 10rem;
 }
-button{
+button {
   margin-left: 0;
 }
 </style>

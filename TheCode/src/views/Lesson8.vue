@@ -1,35 +1,46 @@
 <template>
   <div>
-    <TheHeader/>
-    <BadgeList/>
+    <TheHeader />
+    <BadgeList />
     <UserInfo
-      :full-name="activeUser.name"
-      :info-text="activeUser.description"
-      :role="activeUser.role"
+      v-for="user in activeUser"
+      :key="user.id"
+      :full-name="user.name"
+      :info-text="user.description"
+      :role="user.role"
     />
   </div>
 </template>
 
 <script>
 //Importing components The header, BadgeList, UserInfo
-import TheHeader from '../components/Lesson8/TheHeader'
-import BadgeList from '../components/Lesson8/BadgeList'
-import UserInfo from '../components/Lesson8/UserInfo'
+import TheHeader from "../components/Lesson8/TheHeader";
+import BadgeList from "../components/Lesson8/BadgeList";
+import UserInfo from "../components/Lesson8/UserInfo";
 export default {
-  components:{
+  components: {
     //Exporting components so we can use on Template
-      TheHeader,
-      UserInfo,
-      BadgeList
+    TheHeader,
+    UserInfo,
+    BadgeList,
   },
   data() {
     return {
-      //An object of user
-      activeUser: {
-        name: 'Kastriot Gashi',
-        description: 'Web developer',
-        role: 'admin',
-      },
+      //An arrays of objects of users
+      activeUser: [
+        {
+          id: 0,
+          name: "Kastriot Gashi",
+          description: "Web developer",
+          role: "admin",
+        },
+        {
+          id: 1,
+          name: "John Doe",
+          description: "Content Writter",
+          role: "author",
+        },
+      ],
     };
   },
 };
